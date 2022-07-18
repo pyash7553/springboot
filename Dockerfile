@@ -1,8 +1,14 @@
-FROM openjdk:11
-ADD target/springboot.jar springboot.jar
-CMD ["java","-jar","-cp","springboot.jar"]
+#FROM openjdk:11
+#ADD target/springboot.jar springboot.jar
+#CMD ["java","-jar","-cp","springboot.jar"]
 
+FROM adoptopenjdk/openjdk11:latest
 
+RUN mkdir -p /software
+
+ADD target/springboot.jar /software/springboot.jar
+
+CMD java -Dserver.port=$PORT $JAVA_OPTS -jar /software/springboot.jar
 
 
 
