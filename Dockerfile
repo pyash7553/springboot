@@ -1,6 +1,6 @@
 FROM openjdk:11
-COPY target/springboot.jar springboot.jar
-ENTRYPOINT ["web","java","-jar","/springboot.jar"]
+ADD target/springboot.jar springboot.jar
+CMD ["java","-jar"]
 
 
 
