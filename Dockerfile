@@ -1,6 +1,6 @@
 FROM openjdk:11
 ADD target/springboot.jar springboot.jar
-CMD ["java","-jar"]
+CMD ["java","-jar","-cp","com.example.demo.SpringbootApplication"]
 
 
 
