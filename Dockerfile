@@ -1,6 +1,6 @@
 FROM openjdk:11
-COPY target/springboot-0.0.1-SNAPSHOT.jar springboot-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["web","java","-jar","/springboot-0.0.1-SNAPSHOT.jar"]
+COPY target/springboot.jar springboot.jar
+ENTRYPOINT ["web","java","-jar","/springboot.jar"]
 
 
 
