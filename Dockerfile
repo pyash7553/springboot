@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-alpine
+#FROM openjdk:8-jdk-alpine
+FROM majiajue/jdk1.8
 VOLUME /tmp
 COPY target/springboot.jar springboot.jar
 ENTRYPOINT ["java","-jar",""-Djava.security.egd=file:/dev/./urandom"","/springboot.jar"]
