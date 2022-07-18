@@ -1,6 +1,4 @@
-FROM openjdk:8-jdk-alpine
-#FROM majiajue/jdk1.8
-VOLUME /tmp
+FROM openjdk:11
 COPY target/springboot.jar springboot.jar
 ENTRYPOINT ["web","java","-jar","/springboot.jar"]
 
